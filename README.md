@@ -2,8 +2,6 @@
 
 This is a dynamic and interactive quiz website built using HTML, CSS, and JavaScript.
 
-## Demo
-You can view a live demo of the project [here](https://lithika04.github.io/quiz-website/Quiz%20Website).
 
 ## Features
 - Multiple choice questions
