@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .tutorial-section {
+            max-width: 800px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+        }
+
+        .tutorial-section h3 {
+            color: rgb(146, 28, 28);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Codey Quizz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="js_quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <h1>Tutorial</h1>
+
+    <div class="tutorial-section">
+        <h3>HTML Tutorial</h3>
+        <p>HTML is the code used to write websites. Learn some of the basic HTML tags, the structure of an HTML document and how to correctly nest tags.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" allowfullscreen></iframe>
+        </div>
+
+        <h3>CSS Tutorial</h3>
+        <p>Find out how CSS is used alongside HTML on a website. Learn how to embed CSS and write rules that can make text bold, italic and change font size.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ieTHC78giGQ" allowfullscreen></iframe>
+        </div>
+
+        <h3>JavaScript Tutorial</h3>
+        <p>Learn how JavaScript is used to add functionality and interactivity to HTML. Also, learn how to embed JavaScript and how to change text content when it’s clicked.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Zi-Q0t4gMC8" allowfullscreen></iframe>
+        </div>
+
+        <h3>Python Tutorial</h3>
+        <p>Learn Python, one of the best languages for beginners to start with. You’ll learn what types of projects you can build with Python.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

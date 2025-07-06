@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <script defer src="quiz.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            color: white;
+        }
+
+        .logo h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-top: 30px;
+        }
+
+        #quiz-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-container {
+            margin-bottom: 25px;
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .option {
+            display: block;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+
+        .option:hover {
+            background: #0056b3;
+        }
+
+        #next-btn {
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+
+        #next-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Codey Quizz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="index.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+    <h1>HTML Quiz</h1>
+    <div id="quiz-container">
+        <div class="question-container">
+            <p class="question"></p>
+            <ul class="options">
+                <li><button class="option"></button></li>
+                <li><button class="option"></button></li>
+                <li><button class="option"></button></li>
+                <li><button class="option"></button></li>
+            </ul>
+        </div>
+        <button id="next-btn">Next</button>
+    </div>
+</body>
+</html>
